@@ -1,5 +1,13 @@
 const buttonElement = document.querySelector("#startQuiz")
 
+var timer;
+var counter  = 60;
+var currentIterator = 0;
+
+var startTimer = function () {
+    
+}
+
 /*
 
 TODO: When user clicks the start button
