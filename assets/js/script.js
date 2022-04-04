@@ -4,8 +4,22 @@ var timer;
 var counter  = 60;
 var currentIterator = 0;
 
+var listOfQuestions = [
+    { question: "Commonly used DATA types do NOT include:", choices: ["Strings", "booleans", "alerts", "numbers"],
+correctAnswer: 2 },
+    { question: ""}
+]
+
 var startTimer = function () {
-    
+    timer = setInterval(() => {
+        counter--;
+        console.log("counter: ", counter)
+    })
+
+}
+
+buttonElement.onclick = function () {
+    startTimer();
 }
 
 /*
