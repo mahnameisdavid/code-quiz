@@ -23,12 +23,15 @@ correctAnswert: 2 },
 
 varisGameOver = false;
 
+var listOfQuestions = document.getElementById("questions")
 
 //start the game off and hide the screen
 function startQuiz() {
     console.log('Quiz has begun');
     var startScreenElement = document.getElementById("main-page");
     startScreenElement.setAttribute("class", "hide");
+
+    listOfQuestions.removeAttribute("class");
 }
 
 // as the start question begins this timer will go until quiz is finished
@@ -52,20 +55,27 @@ var stopTimer = function () {
 }
 
 var nextQuestion = function () {
-    const currentIter = iterator;
+    const currentIterator = iterator;
 
-    const questionContainerEl = doucment.createElement("diy")
+    const currentQuestion = ListofQuestions[currentIterator];
 
-    for (var i = 0; question.choices.length; i++) {
-
-    }
-
+    return currentQuestion;
 
 }
 
 var showQuestion = function () {
     const question = nextQuestion();
 
+    const questionWrapperEl = doucment.createElement("div")
+
+    for (var i = 0; question.choices.length; i++) {
+        
+        const questionButton = document.createElement("button");
+        questionButton.textContent = question.choices[i];
+
+        questionWrapperEl.appendChild(questionButton);
+
+    }
     
 }
 
