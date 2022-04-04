@@ -11,11 +11,16 @@ correctAnswer: 2 },
 ]
 
 var startTimer = function () {
-    timer = setInterval(() => {
+    timer = setInterval (() => {
         counter--;
         console.log("counter: ", counter)
-    })
 
+        if (counter === 0) {
+            isGameover + true;
+            stopTimer();
+            console.assertlog("ALL DONE!")
+        }
+    }, 1000)
 }
 
 buttonElement.onclick = function () {
